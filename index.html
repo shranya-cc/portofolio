@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <title>Shranya Dutta | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Back to Top Button Styles */
+    #backToTop {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #ec4899; /* Tailwind pink-500 */
+      color: white;
+      border-radius: 9999px;
+      width: 3.5rem;
+      height: 3.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 0 8px 2px rgba(236,72,153,0.7);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 50;
+    }
+    #backToTop.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    #backToTop:hover {
+      background: #db2777; /* Tailwind pink-600 */
+      box-shadow: 0 0 12px 4px rgba(219,39,119,0.9);
+    }
+    /* Gradient Section Divider */
+    .section-divider {
+      height: 4px;
+      background: linear-gradient(90deg, #ec4899, #fbcfe8, #ec4899);
+      margin: 2rem 0;
+      border-radius: 9999px;
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.7;
+    }
+    /* Animated Social Links */
+    .social-link {
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .social-link:hover {
+      color: #f472b6; /* Tailwind pink-400 */
+      transform: scale(1.2);
+    }
+    /* Custom scrollbar for WebKit browsers */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1f2937; /* Tailwind gray-800 */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ec4899; /* Tailwind pink-500 */
+      border-radius: 9999px;
+    }
+  </style>
 </head>
 <body class="relative text-white font-sans bg-cover bg-no-repeat bg-center" style="background-image: url('assets/portfolio-banner.jpeg');">
   <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
@@ -15,20 +79,22 @@
     <header class="flex justify-between items-center p-6 bg-black bg-opacity-70 shadow-lg">
       <h1 class="text-pink-400 text-2xl font-bold">Shranya.Dev</h1>
       <nav class="space-x-6">
-        <a href="#projects" class="hover:text-pink-400">Projects</a>
-        <a href="#about" class="hover:text-pink-400">About</a>
-        <a href="#contact" class="hover:text-pink-400">Contact</a>
+        <a href="#projects" class="hover:text-pink-400" aria-label="Go to Projects section">Projects</a>
+        <a href="#about" class="hover:text-pink-400" aria-label="Go to About section">About</a>
+        <a href="#contact" class="hover:text-pink-400" aria-label="Go to Contact section">Contact</a>
       </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="text-center py-48 px-4">
-      <div class="bg-black bg-opacity-70 p-6 rounded-xl inline-block">
-        <h2 class="text-5xl font-extrabold mb-4 animate-pulse text-pink-300 drop-shadow-lg">Hiii, I'm Shranya! 🦋</h2>
+      <div class="bg-black bg-opacity-70 p-6 rounded-xl inline-block border-4 border-green-400 shadow-lg shadow-green-400/60">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4 animate-pulse text-pink-300 drop-shadow-lg">Hiii, I'm Shranya! 🦋</h2>
         <p class="text-xl text-gray-200 mb-6">Data Analyst • Business Analyst • Data Engineer • Creative Coder ✨</p>
         <img src="assets/chart.png" alt="Chart Preview" class="rounded-xl max-w-3xl mx-auto w-full shadow-lg hover:shadow-pink-400 transition-all duration-300" />
       </div>
     </section>
+
+    <div class="section-divider"></div>
 
     <!-- Projects Section -->
     <section id="projects" class="px-6 py-20 space-y-12 max-w-5xl mx-auto">
@@ -46,7 +112,7 @@
           <p class="text-gray-300 flex-grow mb-4">
             Deep dive into Netflix’s catalog trends using animated race charts and global visualizations.
           </p>
-          <a href="https://github.com/shranya-cc/-youtube-netflix-analysis.git" target="_blank" class="text-pink-400 hover:underline font-semibold">View Project →</a>
+          <a href="https://github.com/shranya-cc/-youtube-netflix-analysis.git" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline font-semibold hover:bg-pink-700 hover:text-white px-3 py-1 rounded transition duration-300 inline-block">View Project →</a>
         </div>
 
         <!-- YouTube Card -->
@@ -57,7 +123,7 @@
           <p class="text-gray-300 flex-grow mb-4">
             A data-driven exploration of YouTube trends, engagement, and viral content with animated visuals.
           </p>
-          <a href="https://github.com/shranya-cc/-youtube-netflix-analysis.git" target="_blank" class="text-pink-400 hover:underline font-semibold">View Project →</a>
+          <a href="https://github.com/shranya-cc/-youtube-netflix-analysis.git" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline font-semibold hover:bg-pink-700 hover:text-white px-3 py-1 rounded transition duration-300 inline-block">View Project →</a>
         </div>
       </div>
 
@@ -85,6 +151,8 @@
       </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- About -->
     <section id="about" class="px-6 py-20 text-center">
       <div class="bg-black bg-opacity-70 max-w-3xl mx-auto p-6 rounded-xl">
@@ -95,6 +163,8 @@
       </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- Contact -->
     <section id="contact" class="px-6 py-20 text-center">
       <div class="bg-black bg-opacity-70 max-w-xl mx-auto p-6 rounded-xl">
@@ -103,10 +173,10 @@
 
         <!-- Social links with equal spacing -->
         <div class="flex justify-center space-x-6">
-          <a href="https://www.linkedin.com/in/shranya-dutta" class="text-pink-400 hover:underline">LinkedIn</a>
-          <a href="https://www.facebook.com/profile.php?id=61551653511215" class="text-pink-400 hover:underline">Facebook</a>
-          <a href="https://www.instagram.com/shranyadutta?igsh=MjZtZDVybzFqbWIx" class="text-pink-400 hover:underline">Instagram</a>
-          <a href="https://x.com/ShranyaDutta" class="text-pink-400 hover:underline">Twitter</a>
+          <a href="https://www.linkedin.com/in/shranya-dutta" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline social-link">LinkedIn</a>
+          <a href="https://www.facebook.com/profile.php?id=61551653511215" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline social-link">Facebook</a>
+          <a href="https://www.instagram.com/shranyadutta?igsh=MjZtZDVybzFqbWIx" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline social-link">Instagram</a>
+          <a href="https://x.com/ShranyaDutta" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline social-link">Twitter</a>
         </div>
       </div>
     </section>
@@ -116,7 +186,42 @@
       Made with code (💻), coffee (☕), and love (💗) for YouTube ❣️ and Netflix 💌 by Shranya • © 2025
     </footer>
   </main>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Back to Top" title="Back to Top" type="button">
+    ↑
+  </button>
+
+  <!-- Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    window.onload = () => {
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    };
+  </script>
+
+  <script>
+    // Show/hide back to top button on scroll
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+    // Scroll back to top on click
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
+
+
 
 
