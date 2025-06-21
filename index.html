@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Shranya Dutta | Portfolio</title>
@@ -11,12 +11,11 @@
     html {
       scroll-behavior: smooth;
     }
-    /* Back to Top Button Styles */
     #backToTop {
       position: fixed;
       bottom: 2rem;
       right: 2rem;
-      background: #ec4899; /* Tailwind pink-500 */
+      background: #ec4899;
       color: white;
       border-radius: 9999px;
       width: 3.5rem;
@@ -36,41 +35,37 @@
       pointer-events: auto;
     }
     #backToTop:hover {
-      background: #db2777; /* Tailwind pink-600 */
+      background: #db2777;
       box-shadow: 0 0 12px 4px rgba(219,39,119,0.9);
     }
-    /* Gradient Section Divider */
     .section-divider {
       height: 4px;
       background: linear-gradient(90deg, #ec4899, #fbcfe8, #ec4899);
-      margin: 2rem 0;
+      margin: 2rem auto;
       border-radius: 9999px;
       max-width: 200px;
-      margin-left: auto;
-      margin-right: auto;
       opacity: 0.7;
     }
-    /* Animated Social Links */
     .social-link {
       transition: transform 0.3s ease, color 0.3s ease;
     }
     .social-link:hover {
-      color: #f472b6; /* Tailwind pink-400 */
+      color: #f472b6;
       transform: scale(1.2);
     }
-    /* Custom scrollbar for WebKit browsers */
     ::-webkit-scrollbar {
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #1f2937; /* Tailwind gray-800 */
+      background: #1f2937;
     }
     ::-webkit-scrollbar-thumb {
-      background: #ec4899; /* Tailwind pink-500 */
+      background: #ec4899;
       border-radius: 9999px;
     }
   </style>
 </head>
+
 <body class="relative text-white font-sans bg-cover bg-no-repeat bg-center" style="background-image: url('assets/portfolio-banner.jpeg');">
   <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
@@ -79,13 +74,13 @@
     <header class="flex justify-between items-center p-6 bg-black bg-opacity-70 shadow-lg">
       <h1 class="text-pink-400 text-2xl font-bold">Shranya.Dev</h1>
       <nav class="space-x-6">
-        <a href="#projects" class="hover:text-pink-400" aria-label="Go to Projects section">Projects</a>
-        <a href="#about" class="hover:text-pink-400" aria-label="Go to About section">About</a>
-        <a href="#contact" class="hover:text-pink-400" aria-label="Go to Contact section">Contact</a>
+        <a href="#projects" class="hover:text-pink-400">Projects</a>
+        <a href="#about" class="hover:text-pink-400">About</a>
+        <a href="#contact" class="hover:text-pink-400">Contact</a>
       </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="text-center py-48 px-4">
       <div class="bg-black bg-opacity-70 p-6 rounded-xl inline-block border-4 border-green-400 shadow-lg shadow-green-400/60">
         <h2 class="text-4xl md:text-5xl font-extrabold mb-4 animate-pulse text-pink-300 drop-shadow-lg">Hiii, I'm Shranya! 🦋</h2>
@@ -96,54 +91,43 @@
 
     <div class="section-divider"></div>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects" class="px-6 py-20 space-y-12 max-w-5xl mx-auto">
       <h3 class="text-3xl font-bold mb-10 text-center text-pink-400">Projects</h3>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <!-- Netflix Card -->
+        <!-- Netflix -->
         <div class="bg-black bg-opacity-70 rounded-2xl shadow-lg p-6 flex flex-col hover:shadow-pink-500 transition-all">
-          <img src="assets/netflix-barchartrace.gif" alt="Netflix Race Chart GIF" class="rounded-lg mb-4 shadow-md" />
+          <img src="assets/netflix-barchartrace.gif" alt="Netflix Chart" class="rounded-lg mb-4 shadow-md" />
           <video autoplay loop muted playsinline class="rounded-lg mb-4 shadow-md">
             <source src="assets/netflix-worldmap.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <h4 class="text-2xl font-semibold mb-3 text-pink-300">Netflix Titles Analysis</h4>
-          <p class="text-gray-300 flex-grow mb-4">
-            Deep dive into Netflix’s catalog trends using animated race charts and global visualizations.
-          </p>
-          <a href="https://github.com/shranya-cc/-youtube-netflix-analysis.git" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline font-semibold hover:bg-pink-700 hover:text-white px-3 py-1 rounded transition duration-300 inline-block">View Project →</a>
+          <p class="text-gray-300 mb-4">Deep dive into Netflix’s catalog trends using animated race charts and global visualizations.</p>
+          <a href="https://github.com/shranya-cc/-youtube-netflix-analysis.git" target="_blank" class="text-pink-400 hover:underline font-semibold">View Project →</a>
         </div>
 
-        <!-- YouTube Card -->
+        <!-- YouTube -->
         <div class="bg-black bg-opacity-70 rounded-2xl shadow-lg p-6 flex flex-col hover:shadow-pink-500 transition-all">
-          <img src="assets/YouTube-gif2.gif" alt="YouTube Animation 1" class="rounded-lg mb-4 shadow-md" />
-          <img src="assets/YouTube-gif3.gif" alt="YouTube Animation 2" class="rounded-lg mb-4 shadow-md" />
+          <img src="assets/YouTube-gif2.gif" alt="YouTube GIF 1" class="rounded-lg mb-4 shadow-md" />
+          <img src="assets/YouTube-gif3.gif" alt="YouTube GIF 2" class="rounded-lg mb-4 shadow-md" />
           <h4 class="text-2xl font-semibold mb-3 text-pink-300">YouTube Data Storytelling</h4>
-          <p class="text-gray-300 flex-grow mb-4">
-            A data-driven exploration of YouTube trends, engagement, and viral content with animated visuals.
-          </p>
-          <a href="https://github.com/shranya-cc/-youtube-netflix-analysis.git" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline font-semibold hover:bg-pink-700 hover:text-white px-3 py-1 rounded transition duration-300 inline-block">View Project →</a>
+          <p class="text-gray-300 mb-4">A data-driven exploration of YouTube trends, engagement, and viral content with animated visuals.</p>
+          <a href="https://github.com/shranya-cc/-youtube-netflix-analysis.git" target="_blank" class="text-pink-400 hover:underline font-semibold">View Project →</a>
         </div>
       </div>
 
-      <!-- Filler Section -->
       <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Butterfly -->
-        <div class="bg-black bg-opacity-60 rounded-2xl shadow-lg p-5 flex flex-col items-center justify-center text-center hover:shadow-pink-500 transition-all">
+        <div class="bg-black bg-opacity-60 rounded-2xl shadow-lg p-5 text-center hover:shadow-pink-500 transition-all">
           <p class="text-3xl mb-2 animate-pulse">🦋🌼✨</p>
           <p class="text-sm text-pink-200 italic mb-4">“Like a butterfly from its cocoon, raw data unfolds into insight.”</p>
-          <img src="assets/butterfly.jpeg" alt="Cute Butterfly Pic" class="rounded-xl max-h-64 w-full object-cover mb-2 shadow-md" onerror="this.style.display='none'" />
+          <img src="assets/butterfly.jpeg" alt="Butterfly" class="rounded-xl max-h-64 w-full object-cover mb-2 shadow-md" />
         </div>
-
-        <!-- Flowers -->
         <div class="bg-black bg-opacity-50 rounded-2xl shadow-inner p-6 text-center">
           <p class="text-3xl animate-bounce mb-2">🌷🪻🌸</p>
           <p class="text-sm text-gray-300 mb-4">visual vibes only</p>
-          <img src="assets/portfolio-image2.png" alt="Portfolio Image 2" class="rounded-xl max-w-full h-auto shadow-md" onerror="this.style.display='none'" />
+          <img src="assets/portfolio-image2.png" alt="Flower Vibe" class="rounded-xl w-full h-auto shadow-md" />
         </div>
-
-        <!-- Coming Soon -->
         <div class="bg-black bg-opacity-70 rounded-2xl shadow-lg p-6 text-center flex flex-col justify-center hover:shadow-pink-500 transition-all">
           <p class="text-lg font-semibold text-pink-300 mb-2">Coming Soon!💫</p>
           <p class="text-sm text-gray-300">Another magical data story is on its way!😉</p>
@@ -170,58 +154,45 @@
       <div class="bg-black bg-opacity-70 max-w-xl mx-auto p-6 rounded-xl">
         <h3 class="text-3xl font-bold mb-6 text-pink-400">Let's connect!</h3>
         <p class="text-gray-300 mb-3">🎁 shranyadutta12@gmail.com</p>
-
-        <!-- Social links with equal spacing -->
         <div class="flex justify-center space-x-6">
-          <a href="https://www.linkedin.com/in/shranya-dutta" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline social-link">LinkedIn</a>
-          <a href="https://www.facebook.com/profile.php?id=61551653511215" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline social-link">Facebook</a>
-          <a href="https://www.instagram.com/shranyadutta?igsh=MjZtZDVybzFqbWIx" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline social-link">Instagram</a>
-          <a href="https://x.com/ShranyaDutta" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:underline social-link">Twitter</a>
+          <a href="https://www.linkedin.com/in/shranya-dutta" target="_blank" class="text-pink-400 hover:underline social-link">LinkedIn</a>
+          <a href="https://www.facebook.com/profile.php?id=61551653511215" target="_blank" class="text-pink-400 hover:underline social-link">Facebook</a>
+          <a href="https://www.instagram.com/shranyadutta" target="_blank" class="text-pink-400 hover:underline social-link">Instagram</a>
+          <a href="https://x.com/ShranyaDutta" target="_blank" class="text-pink-400 hover:underline social-link">Twitter</a>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="p-4 text-center text-gray-400 text-sm bg-black bg-opacity-60">
       Made with code (💻), coffee (☕), and love (💗) for YouTube ❣️ and Netflix 💌 by Shranya • © 2025
     </footer>
   </main>
 
-  <!-- Back to Top Button -->
-  <button id="backToTop" aria-label="Back to Top" title="Back to Top" type="button">
-    ↑
-  </button>
+  <button id="backToTop" title="Back to Top">↑</button>
 
-  <!-- Confetti Script -->
+  <!-- Confetti Magic -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   <script>
     window.onload = () => {
       confetti({
-        particleCount: 150,
-        spread: 70,
-        origin: { y: 0.6 }
+        particleCount: 120,
+        spread: 80,
+        origin: { y: 0.6 },
       });
     };
   </script>
 
+  <!-- Back to Top Script -->
   <script>
-    // Show/hide back to top button on scroll
     const backToTopBtn = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.classList.add('show');
-      } else {
-        backToTopBtn.classList.remove('show');
-      }
+      backToTopBtn.classList.toggle('show', window.scrollY > 300);
     });
-    // Scroll back to top on click
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>
 </html>
-
-
 
 
