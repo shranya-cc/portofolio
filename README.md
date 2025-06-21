@@ -11,7 +11,7 @@ Dive into my magical world right here! :-
 
 ## What's this about?
 
-Well basically! Im a BTech student completely obsessed with turning boring data into **beautiful stories**- imagine! NEtflix binge stats mixed with YouTube vibes!
+Well basically! Im a BTech student completely obsessed with turning boring data into **beautiful stories**- imagine! Netflix binge stats mixed with YouTube vibes!
 I love to code! crunching numbers haha, and adding a dash of creativity to everything I do!
 
 ---
