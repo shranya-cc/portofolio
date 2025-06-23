@@ -213,10 +213,18 @@
       Made with code (💻), coffee (☕), and love (💗) for YouTube ❣️ and Netflix 💌 by Shranya • © 2025
     </footer>
 
+ 
   </main>
 
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const navLinks = document.getElementById('nav-links');
+
+    menuButton.addEventListener('click', () => {
+      navLinks.classList.toggle('hidden');
+    });
+  </script>
+
 </body>
-
 </html>
-
 
